@@ -180,7 +180,7 @@ var krpanoplugin = function () {
             if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)) {
                 var text = xmlHttp.responseText;
                 if (text.indexOf("passworderror") >= 0) {
-                    alert("浏览点赞插件中的密码设置错误，请加入群156364025找管理人员免费获取密码")
+                    alert("浏览点赞插件中的密码设置错误，请加入群551278936，从群文件中下载软件获取uid")
                 }
                 else {
                     text = text.replace(/"/g, "");
