@@ -1,0 +1,43 @@
+<krpano  debugmode="true"  logkey="true">
+
+	<!--请加入群551278936,下载uid生成工具-->
+	<!--使用说明，参见 http://blog.turenlong.com/post/2016/05/10/krpano -->
+	<!--测试时，uid="test" -->
+	<plugin name="va" keep="true"
+	        url="va.js"
+			uid="" 
+			onloaded="initial();"
+	/>
+	
+
+	<action  name="initial"  devices="desktop">
+		plugin[va].initial_plugin(get(uid));
+	</action>
+	
+	<action  name="set_agree_view"  devices="desktop">
+		set(layer[agree_num_txt].html,%1);
+		set(layer[view_num_txt].html,%2);
+		
+		set(layer[agree_num].visible,true);
+		set(layer[view_num].visible,true);
+	</action>
+	
+	<action  name="set_agree"  devices="desktop">
+		set(layer[agree_num_txt].html,%1);
+	</action>
+	
+	<action  name="set_view"  devices="desktop">
+		set(layer[view_num_txt].html,%1);
+	</action>
+	
+	
+	<layer keep="true" name="agree_num" url="agree1.png"  x="120" y="20" align="righttop" scale="0.5" maskchildren="false" visible="false" onclick="plugin[va].add_agree();">
+		<layer name="agree_num_txt" url="%SWFPATH%/plugins/textfield.swf" backgroundalpha="0" x="-5" edge="left" align="right" y="0" css="calc:skin_settings.design_text_css + ' text-align:left; font-size:' + (device.mobile ? 12 : 16) + 'px;'" textshadow="get:skin_settings.design_text_shadow" html=""  width="65"/>
+	</layer>
+	
+	<layer keep="true"  name="view_num" url="view.png" crop="0|704|64|64"  x="220" y="20" align="righttop" scale="0.5" onclick="" visible="false">
+		<layer name="view_num_txt" url="%SWFPATH%/plugins/textfield.swf" backgroundalpha="0"  x="-5" y="0" edge="left" align="right" css="calc:skin_settings.design_text_css + ' text-align:left; font-size:' + (device.mobile ? 12 : 16) + 'px;'" textshadow="get:skin_settings.design_text_shadow" html="" width="65"/>
+	</layer>
+	
+
+</krpano>
