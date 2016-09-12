@@ -1,7 +1,7 @@
 
 /*
-  浏览点赞插件by 翠#，无需服务器，简单配置即可使用
-  详细说明参见：http://blog.turenlong.com/post/2016/05/10/krpano
+  浏览点赞插件by SLdragon，无需服务器，简单配置即可使用
+  详细说明参见：
   技术交流群：551278936
 */
 
@@ -50,7 +50,7 @@ var krpanoplugin = function () {
     }
 
 
-    var baseURL = "http://www.yjh001.com:8080/api/ViewAndAgreeModels/";
+    var baseURL = "http://viewandagree.azurewebsites.net/api/ViewAndAgreeModels/";
 
     var site_url;
     var password;
@@ -180,7 +180,7 @@ var krpanoplugin = function () {
             if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)) {
                 var text = xmlHttp.responseText;
                 if (text.indexOf("passworderror") >= 0) {
-                    alert("浏览点赞插件中的密码设置错误，请加入群551278936，从群文件中下载软件获取uid")
+                    alert("浏览点赞插件中的密码设置错误，请加入群156364025找管理人员免费获取密码")
                 }
                 else {
                     text = text.replace(/"/g, "");
@@ -212,7 +212,7 @@ var krpanoplugin = function () {
             if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)) {
                 var text = xmlHttp.responseText;
                 if (text.indexOf("passworderror") >= 0) {
-                    alert("浏览点赞插件中的密码设置错误，请加入群156364025找管理人员免费获取密码")
+                    alert("浏览点赞插件中的密码设置错误，请加入群551278936找管理人员免费获取密码")
                 }
                 else {
                     text = text.replace(/"/g, "");
