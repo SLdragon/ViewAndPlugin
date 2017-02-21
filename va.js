@@ -55,8 +55,10 @@ var krpanoplugin = function () {
     var site_url;
     var password;
 
+
     function initial_plugin(uid) {
-        site_url = window.location.href;
+        site_url = window.location.href.split("?")[0];
+        
         password = uid;
         if (hasAgreeCookie()) {
             krpano.call("set(layer[agree_num].url,'agree2.png');set(layer[agree_num].onclick,'plugin[va].cancel_agree();')");
