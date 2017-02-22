@@ -10,11 +10,11 @@
 	/>
 	
 
-	<action  name="initial"  devices="desktop">
+	<action  name="initial">
 		plugin[va].initial_plugin(get(uid));
 	</action>
 	
-	<action  name="set_agree_view"  devices="desktop">
+	<action  name="set_agree_view">
 		set(layer[agree_num_txt].html,%1);
 		set(layer[view_num_txt].html,%2);
 		
@@ -22,11 +22,11 @@
 		set(layer[view_num].visible,true);
 	</action>
 	
-	<action  name="set_agree"  devices="desktop">
+	<action  name="set_agree">
 		set(layer[agree_num_txt].html,%1);
 	</action>
 	
-	<action  name="set_view"  devices="desktop">
+	<action  name="set_view">
 		set(layer[view_num_txt].html,%1);
 	</action>
 	
